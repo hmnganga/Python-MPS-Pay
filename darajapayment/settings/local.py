@@ -28,7 +28,7 @@ SECRET_KEY = '=w2_us=on)qmjb#)wapj+4do-n$5j)m3o43*cbyrl(8cbvt8i-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = 'sleepy-atoll-56664.herokuapp.com'
 
 
 # Application definition
