@@ -3,8 +3,8 @@ import os
 
 from decouple import config
 
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID = ("AKIAWZYQ2ZGINDPEXW2S")
+AWS_SECRET_ACCESS_KEY = ("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")
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
