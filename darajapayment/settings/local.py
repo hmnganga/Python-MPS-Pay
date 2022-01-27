@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'darajapayment.darajapayment.urls'
+ROOT_URLCONF = 'darajapayment.urls'
 
 TEMPLATES = [
     {
