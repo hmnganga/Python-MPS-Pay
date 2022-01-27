@@ -2,6 +2,6 @@
 # Mpesa Express => (Online Payment)
 
 
-# ~/documents/venvdaraja/bin/activate
+# source ~/documents/venvdaraja/bin/activate
 
 # python manage.py runserver
