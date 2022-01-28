@@ -36,7 +36,7 @@ def lipa_na_mpesa():
          "PartyB": '174379',
          "PhoneNumber": keys.phone_number,
          "CallBackURL": "https://sleepy-atoll-56664.herokuapp.com/api/payments/lnm/",
-         "AccountReference":"yesi",
+         "AccountReference":"test me",
          "TransactionDesc":"Pay Test Acc",
     }
     response = requests.post(api_url, json=request, headers=headers)
