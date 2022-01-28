@@ -11,3 +11,6 @@ class LNMOnline(models.Model):
     MpesaReceiptNumber = models.CharField(max_length=15, blank=True, null=True)
     TransactionDate = models.DateTimeField(blank=True, null=True)
     PhoneNumber = models.CharField(max_length=13, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.PhoneNumber} has sent {self.Amount} >> {self.MpesaReceiptNumber}"
