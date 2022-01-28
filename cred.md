@@ -31,29 +31,36 @@
         }
         """
 
-        {'Body': 
-        {'stkCallback': 
-        {
-            'MerchantRequestID': '14831-6336888-1', 
-            'CheckoutRequestID': 
-            'ws_CO_280120221124004074', 
-            'ResultCode': 0, 
-            'ResultDesc': 'The service request is 
-            processed successfully.', 
-        'CallbackMetadata': {
-                              'Item': [
-                                  {'Name': 
-                                  'Amount',
-                                   'Value': 1.0}, 
-                                  {'Name': 
-                                  'MpesaReceiptNumber', 
-                                  'Value': 
-                                  'QAS59KSDSR'}, 
-                                 {'Name': 
-                                 'TransactionDate', 
-                                 'Value': 
-                                 20220128112530}, 
-                                {'Name': 
-                                'PhoneNumber', 
-                                'Value': 
-                                  254799568838}]}}}}
+        {'Body': {
+            
+            'stkCallback': {
+                'MerchantRequestID': '45173-15693048-1', 
+                'CheckoutRequestID': 'ws_CO_280120221715252562', 
+                'ResultCode': 0, 
+                'ResultDesc': 'The service request is processed successfully.', 
+                
+                     'CallbackMetadata': {'Item': 
+                                  
+                                  [
+                                      {
+                                          'Name': 'Amount', 
+                                          'Value': 1.0},  = 0
+
+                                             {
+                                                 'Name': 'MpesaReceiptNumber', 
+                                                 'Value': 'QAS8A6RR9O'},  =1
+
+                                                 {'Name': 'TransactionDate', 
+                                                 'Value': 20220128171659}, =2
+
+                                                 {'Name': 'PhoneNumber', 
+                                                 'Value': 254799568838} =3
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 ]}}}} This is request.data
+
+
+
+

@@ -60,11 +60,11 @@ class LNMCallbackUrlAPIView(CreateAPIView):
 
         transaction_date = request.data["Body"]["stkCallback"]["CallbackMetadata"][
             "Item"
-        ][3]["Value"]
+        ][2]["Value"]
         print(transaction_date, "this should be an transaction_date")
 
         phone_number = request.data["Body"]["stkCallback"]["CallbackMetadata"]["Item"][
-            4
+            3
         ]["Value"]
         print(phone_number, "this should be a phone_number")
 
