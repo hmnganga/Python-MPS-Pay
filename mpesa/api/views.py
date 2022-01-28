@@ -83,8 +83,8 @@ class LNMCallbackUrlAPIView(CreateAPIView):
         from mpesa.models import LNMOnline
 
         our_model = LNMOnline.objects.create(
-            CheckoutRequestID=checkout_request_id,
             MerchantRequestID=merchant_request_id,
+            CheckoutRequestID=checkout_request_id,
             Amount=amount,
             ResultCode=result_code,
             ResultDesc=result_description,
@@ -94,7 +94,7 @@ class LNMCallbackUrlAPIView(CreateAPIView):
         )
 
         our_model.save()
-        
+
         from rest_framework.response import Response
         
         return Response({"OurResultDesc": "YEEY!!! It worked!"})

@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class LNMOnline(models.Model):
-    CheckoutRequestID = models.CharField(max_length=50, blank=True, null=True)
     MerchantRequestID = models.CharField(max_length=20, blank=True, null=True)
+    CheckoutRequestID = models.CharField(max_length=50, blank=True, null=True)
     ResultCode = models.IntegerField(blank=True, null=True)
     ResultDesc = models.CharField(max_length=120, blank=True, null=True)
     Amount = models.FloatField(blank=True, null=True)
