@@ -14,35 +14,35 @@ class LNMCallbackUrlAPIView(CreateAPIView):
         print(request.data,"This is request.data")
 
 
-        """ 
-        {'Body': 
-        {'stkCallback': 
-        {
-            'MerchantRequestID': '14831-6336888-1', 
-            'CheckoutRequestID': 
-            'ws_CO_280120221124004074', 
-            'ResultCode': 0, 
-            'ResultDesc': 'The service request is 
-            processed successfully.', 
-        'CallbackMetadata': {
-                              'Item': [
-                                  {'Name': 
-                                  'Amount',
-                                   'Value': 1.0}, 
-                                  {'Name': 
-                                  'MpesaReceiptNumber', 
-                                  'Value': 
-                                  'QAS59KSDSR'}, 
-                                 {'Name': 
-                                 'TransactionDate', 
-                                 'Value': 
-                                 20220128112530}, 
-                                {'Name': 
-                                'PhoneNumber', 
-                                'Value': 
-                                  254799568838}]}}}}
         
-         """
+        # {'Body': 
+        # {'stkCallback': 
+        # {
+        #     'MerchantRequestID': '14831-6336888-1', 
+        #     'CheckoutRequestID': 
+        #     'ws_CO_280120221124004074', 
+        #     'ResultCode': 0, 
+        #     'ResultDesc': 'The service request is 
+        #     processed successfully.', 
+        # 'CallbackMetadata': {
+        #                       'Item': [
+        #                           {'Name': 
+        #                           'Amount',
+        #                            'Value': 1.0}, 
+        #                           {'Name': 
+        #                           'MpesaReceiptNumber', 
+        #                           'Value': 
+        #                           'QAS59KSDSR'}, 
+        #                          {'Name': 
+        #                          'TransactionDate', 
+        #                          'Value': 
+        #                          20220128112530}, 
+        #                         {'Name': 
+        #                         'PhoneNumber', 
+        #                         'Value': 
+        #                           254799568838}]}}}}
+        
+        
 
         merchant_request_id = request.data["Body"]["stkCallback"]["MerchantRequestID"]
         print(merchant_request_id, "this should be MerchantRequestID")
