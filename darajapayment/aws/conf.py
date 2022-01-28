@@ -2,8 +2,8 @@ import datetime
 
 from decouple import config
 
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID = "AKIAWZYQ2ZGINDPEXW2S"
+AWS_SECRET_ACCESS_KEY = "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"
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
@@ -13,7 +13,7 @@ DEFAULT_FILE_STORAGE = "darajapayment.aws.utils.MediaRootS3BotoStorage"
 STATICFILES_STORAGE = "darajapayment.aws.utils.StaticRootS3BotoStorage"
 
 
-AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
+AWS_STORAGE_BUCKET_NAME = "staticfolder111"
 S3DIRECT_REGION = "us-east-1"
 
 S3_URL = "//%s.s3.amazonaws.com/" % AWS_STORAGE_BUCKET_NAME
