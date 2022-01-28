@@ -95,6 +95,4 @@ class LNMCallbackUrlAPIView(CreateAPIView):
 
         our_model.save()
 
-        from rest_framework.response import Response
-
-        return Response({"OurResultDesc": "YEEY!!! It worked!"})
+       
