@@ -66,7 +66,7 @@ class LNMCallbackUrlAPIView(CreateAPIView):
         phone_number = request.data["Body"]["stkCallback"]["CallbackMetadata"]["Item"][
             4
         ]["Value"]
-        print(phone_number, "this should be an phone_number")
+        print(phone_number, "this should be a phone_number")
 
         from datetime import datetime
 
