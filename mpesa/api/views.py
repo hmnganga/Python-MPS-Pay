@@ -67,3 +67,34 @@ class LNMCallbackUrlAPIView(CreateAPIView):
             4
         ]["Value"]
         print(phone_number, "this should be an phone_number")
+
+        from datetime import datetime
+
+        str_transaction_date = str(transaction_date)
+        print(str_transaction_date, "this should be an str_transaction_date")
+
+        transaction_datetime = datetime.strptime(str_transaction_date, "%Y%m%d%H%M%S")
+        print(transaction_datetime, "this should be an transaction_datetime")
+
+        import pytz
+        aware_transaction_datetime = pytz.utc.localize(transaction_datetime)
+        print(aware_transaction_datetime, "this should be an aware_transaction_datetime")
+
+        from mpesa.models import LNMOnline
+
+        our_model = LNMOnline.objects.create(
+            CheckoutRequestID=checkout_request_id,
+            MerchantRequestID=merchant_request_id,
+            Amount=amount,
+            ResultCode=result_code,
+            ResultDesc=result_description,
+            MpesaReceiptNumber=mpesa_receipt_number,
+            TransactionDate=aware_transaction_datetime,
+            PhoneNumber=phone_number,
+        )
+
+        our_model.save()
+
+        from rest_framework.response import Response
+
+        return Response({"OurResultDesc": "YEEY!!! It worked!"})
