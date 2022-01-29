@@ -120,11 +120,28 @@ class C2BConfirmationAPIView(CreateAPIView):
     serializer_class = C2BPaymentSerializer
     permission_classes = [AllowAny]
 
-    def create(self, request):
-        print(request.data,"This is request.data in Confirmation")
+    # def create(self, request):
+    #     print(request.data, "this is request.data in Confirmation")
+
+    #     """
+    #     {'TransactionType': 'Pay Bill', 
+    #     'TransID': 'NCQ61H8BK4',
+    #      'TransTime': '20190326210441',
+    #       'TransAmount': '2.00', 
+    #       'BusinessShortCode': '601445',
+    #        'BillRefNumber': '12345678', 
+    #        'InvoiceNumber': '', 
+    #        'OrgAccountBalance': '18.00', 
+    #        'ThirdPartyTransID': '', 
+    #        'MSISDN': '254708374149', 
+    #        'FirstName': 'John', 
+    #        'MiddleName': 'J.', 
+    #        'LastName': 'Doe'
+    #        } 
+    #        this is request.data in Confirmation
+    #        """
 
 
+    #     from rest_framework.response import Response
 
-        from rest_framework.response import Response
-        
-        return Response({"ResultDesc": 0})
+    #     return Response({"ResultDesc": 0})
