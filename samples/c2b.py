@@ -15,8 +15,8 @@ def register_url():
     
     "ShortCode": keys.shortcode,
     "ResponseType":"Completed",
-    "ConfirmationURL":"https://mydomain.com/confirmation",
-    "ValidationURL":"https://mydomain.com/validation",
+    "ConfirmationURL":"https://sleepy-atoll-56664.herokuapp.com/api/payments/c2b-confirmation/",
+    "ValidationURL":"https://sleepy-atoll-56664.herokuapp.com/api/payments/c2b-validation/",
 
     }
     response = requests.post(api_url, json=request, headers=headers)

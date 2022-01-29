@@ -1,6 +1,6 @@
 from rest_framework.generics import CreateAPIView
-from mpesa.api.serializers import LNMOnlineSerializer
-from mpesa.models import LNMOnline
+from mpesa.api.serializers import LNMOnlineSerializer,C2BPaymentSerializer
+from mpesa.models import LNMOnline, C2BPayments
 
 
 from rest_framework.permissions import AllowAny
@@ -100,3 +100,31 @@ class LNMCallbackUrlAPIView(CreateAPIView):
         return Response({"OurResultDesc": "YEEY!!! It worked!"})
 
        
+class C2BValidationAPIView(CreateAPIView):
+    queryset = C2BPayments.objects.all()
+    serializer_class = C2BPaymentSerializer
+    permission_classes = [AllowAny]
+
+    # def create(self, request):
+    #     print(request.data,"This is request.data in Validation")
+
+
+
+    #     from rest_framework.response import Response
+        
+    #     return Response({"OurResultDesc": "YEEY!!! It worked!"})
+
+
+class C2BConfirmationAPIView(CreateAPIView):
+    queryset = C2BPayments.objects.all()
+    serializer_class = C2BPaymentSerializer
+    permission_classes = [AllowAny]
+
+    def create(self, request):
+        print(request.data,"This is request.data in Confirmation")
+
+
+
+        from rest_framework.response import Response
+        
+        return Response({"ResultDesc": 0})
