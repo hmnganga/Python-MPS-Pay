@@ -14,7 +14,21 @@ class LNMOnlineSerializer(serializers.ModelSerializer):
 class C2BPaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = C2BPayments
-        fields = ("id",)
+        fields = ("id",
+        "TransactionType",
+        "TransID",
+        "TransTime",
+        "TransAmount",
+        "BusinessShortCode",
+        "BillRefNumber",
+        "InvoiceNumber",
+        "OrgAccountBalance",
+        "ThirdPartyTransID",
+        "MSISDN",
+        "FirstName",
+        "MiddleName",
+        "LastName",
+        )
 
 
 

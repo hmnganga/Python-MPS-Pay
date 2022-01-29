@@ -10,7 +10,7 @@ def generate_access_token():
 
     )
     r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
-
+    # print(r.text)
 
     json_response = r.json()
 
