@@ -1,1 +1,1 @@
-web: gunicorn darajapayment.wsgi 
+web: gunicorn darajapayment.wsgi --log-file -
