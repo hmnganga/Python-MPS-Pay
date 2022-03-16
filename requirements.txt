@@ -53,3 +53,4 @@ botocore==1.23.44
 jmespath==0.10.0 
 python-dateutil==2.8.2
 urllib3==1.26.8
+whitenoise==6.0.0
