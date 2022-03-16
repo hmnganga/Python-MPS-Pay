@@ -1,22 +1,10 @@
 # Mpesa Express
 import requests
 from utils import get_timestamp
-
-
-
 from requests.auth import HTTPBasicAuth
 from access_token import generate_access_token
 from encode import generate_password
 import keys
-
-
-
-
-
-
-
-
-
 
 def lipa_na_mpesa():
     formatted_time = get_timestamp()
